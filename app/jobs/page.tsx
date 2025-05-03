@@ -236,6 +236,7 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
     )
   }
 
+  // Main content
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       <main className="container mx-auto px-4 py-8">
@@ -366,7 +367,7 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
                       {(job.requirements || "")
                         .split("\n")
                         .filter(Boolean)
-                        .map((req: string, index: number) => (
+                        .map((req, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <div className="mt-1 text-red-600">
                               <Check size={16} />
@@ -384,7 +385,7 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
                         {job.preferred_skills
                           .split("\n")
                           .filter(Boolean)
-                          .map((skill: string, index: number) => (
+                          .map((skill, index) => (
                             <li key={index} className="flex items-start gap-2">
                               <div className="mt-1 text-green-600">
                                 <Plus size={16} />
@@ -428,7 +429,7 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
                       {(job.benefits || "各種社会保険完備\n交通費支給\n在宅勤務手当\n書籍購入補助")
                         .split("\n")
                         .filter(Boolean)
-                        .map((benefit: string, index: number) => (
+                        .map((benefit, index) => (
                           <div key={index} className="flex items-center gap-2">
                             <div className="text-green-600">
                               <Check size={16} />
