@@ -1255,5 +1255,5 @@ export default function JobsPage() {
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
